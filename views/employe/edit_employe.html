@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+
+<h1>{{ title }}</h1>
+
+<br>
+
+<form method="post" action="/employe/put_update_data_employe/{{employe.id}}?_method=PUT">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Name </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" placeholder="Aditya Nugroho Subono"
+                value="{{employe.name}}" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Position </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="position" placeholder="Back End Enginer"
+                value="{{employe.position}}" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Divison </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="office" placeholder="Division IT" value="{{employe.office}}"
+                required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Phone Number</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="phone_number" placeholder="0867878787878"
+                value="{{employe.phone_number}}" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Age </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="age" placeholder="23th" value="{{employe.age}}" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Start Date </label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" name="start_date" placeholder="12/07/1998"
+                value="{{employe.start_date}}" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Salary </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="salary" placeholder="90000000" value="{{employe.salary}}"
+                required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+
+
+
+{% endblock %}
